@@ -248,6 +248,9 @@
                             <constraint firstItem="JOh-hA-qgY" firstAttribute="top" secondItem="Nh6-0N-2OK" secondAttribute="bottom" constant="20" id="z6e-J6-Wxq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="8Zf-Ho-WLv" id="raD-Cb-PT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1P-x2-DMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

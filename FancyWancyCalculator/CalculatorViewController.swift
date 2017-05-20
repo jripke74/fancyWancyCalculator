@@ -10,8 +10,13 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    @IBOutlet weak var outputLabel: UITextField!
+    
     var runningNumber = ""
     var currentOperation = Operation.Empty
+    var leftOperandString = ""
+    var rightOperandString = ""
+    var result = ""
     
     enum Operation: String {
         case Divide = "/"
@@ -23,7 +28,7 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        outputLabel.text = "0"
     }
 
 }
