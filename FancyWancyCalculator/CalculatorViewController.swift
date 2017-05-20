@@ -59,4 +59,28 @@ class CalculatorViewController: UIViewController {
     @IBAction func clearButtonPressed(sender: UIButton) {
         
     }
+    
+    func processOperation(operation: Operation) {
+        if currentOperation != Operation.Empty {
+            rightOperandString = runningNumber
+            if runningNumber != "" {
+                if currentOperation == Operation.Multiply {
+                    result = "\(Double(leftOperandString)! * Double(rightOperandString)!)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(Double(leftOperandString)! / Double(rightOperandString)!)"
+                } else if currentOperation == Operation.Subtract {
+                    result = "\(Double(leftOperandString)! - Double(rightOperandString)!)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(Double(leftOperandString)! + Double(rightOperandString)!)"
+                }
+                leftOperandString = result
+                outputLabel.text = result
+            }
+            currentOperation = operation
+        } else {
+            leftOperandString = runningNumber
+            runningNumber = ""
+            currentOperation = operation
+        }
+    }
 }
