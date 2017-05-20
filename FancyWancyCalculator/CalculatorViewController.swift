@@ -35,4 +35,28 @@ class CalculatorViewController: UIViewController {
         runningNumber += "\(sender.tag)"
         outputLabel.text = runningNumber
     }
+    
+    @IBAction func additionOperatorPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func subtractionOperatorPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func multiplicationOperatorPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func divisionOperatorPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func egualButtonPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func clearButtonPressed(sender: UIButton) {
+        
+    }
 }

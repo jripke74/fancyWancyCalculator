@@ -71,6 +71,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="additionOperatorPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="RuQ-fS-JJT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,6 +124,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="subtractionOperatorPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="ZTG-yc-hIe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -171,6 +177,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="×"/>
+                                                <connections>
+                                                    <action selector="multiplicationOperatorPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="rwv-yh-U5W"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -185,6 +194,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="egualButtonPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="t7s-0h-BQM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkB-5O-I8X">
                                                 <rect key="frame" x="68" y="0.0" width="60" height="60"/>
@@ -215,6 +227,10 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="clearButtonPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="Zob-kS-4iY"/>
+                                                    <action selector="divisionOperatorPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="ew9-Gb-AEi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
