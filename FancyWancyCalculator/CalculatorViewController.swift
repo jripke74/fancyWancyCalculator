@@ -37,33 +37,39 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func additionOperatorPressed(sender: UIButton) {
-        
+        processOperation(operation: .Add)
     }
     
     @IBAction func subtractionOperatorPressed(sender: UIButton) {
-        
+        processOperation(operation: .Subtract)
     }
     
     @IBAction func multiplicationOperatorPressed(sender: UIButton) {
-        
+        processOperation(operation: .Multiply)
     }
     
     @IBAction func divisionOperatorPressed(sender: UIButton) {
-        
+        processOperation(operation: .Divide)
     }
     
     @IBAction func egualButtonPressed(sender: UIButton) {
-        
+        processOperation(operation: currentOperation)
     }
     
     @IBAction func clearButtonPressed(sender: UIButton) {
-        
+        runningNumber = ""
+        currentOperation = Operation.Empty
+        leftOperandString = ""
+        rightOperandString = ""
+        result = ""
+        outputLabel.text = "0"
     }
     
     func processOperation(operation: Operation) {
         if currentOperation != Operation.Empty {
-            rightOperandString = runningNumber
             if runningNumber != "" {
+                rightOperandString = runningNumber
+                runningNumber = ""
                 if currentOperation == Operation.Multiply {
                     result = "\(Double(leftOperandString)! * Double(rightOperandString)!)"
                 } else if currentOperation == Operation.Divide {

@@ -218,6 +218,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearButtonPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="TKp-Am-WRU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMk-hc-5Hy">
                                                 <rect key="frame" x="204" y="0.0" width="60" height="60"/>
@@ -228,7 +231,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="÷"/>
                                                 <connections>
-                                                    <action selector="clearButtonPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="Zob-kS-4iY"/>
                                                     <action selector="divisionOperatorPressedWithSender:" destination="dk8-0k-nCd" eventType="touchUpInside" id="ew9-Gb-AEi"/>
                                                 </connections>
                                             </button>
