@@ -31,4 +31,8 @@ class CalculatorViewController: UIViewController {
         outputLabel.text = "0"
     }
 
+    @IBAction func numberPressed(sender: UIButton) {
+        runningNumber += "\(sender.tag)"
+        outputLabel.text = runningNumber
+    }
 }
