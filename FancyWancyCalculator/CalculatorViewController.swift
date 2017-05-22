@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UITextField!
     
+    var buttonOneAudioPlayer = AVAudioPlayer()
+    var buttonTwoAudioPlayer = AVAudioPlayer()
+    var buttonThreeAudioPlayer = AVAudioPlayer()
+    var buttonFourAudioPlayer = AVAudioPlayer()
+    
     var runningNumber = ""
+    var numberPressed = ""
     var currentOperation = Operation.Empty
     var leftOperandString = ""
     var rightOperandString = ""
     var result = ""
-    
+
     enum Operation: String {
         case Divide = "/"
         case Multiply = "*"
@@ -28,12 +35,54 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let buttonOneSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonTwoSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonThreeSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonFourSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonOneSoundURL = URL(fileURLWithPath: buttonOneSoundPath!)
+        let buttonTwoSoundURL = URL(fileURLWithPath: buttonTwoSoundPath!)
+        let buttonThreeSoundURL = URL(fileURLWithPath: buttonThreeSoundPath!)
+        let buttonFourSoundURL = URL(fileURLWithPath: buttonFourSoundPath!)
+        do {
+            try buttonOneAudioPlayer = AVAudioPlayer(contentsOf: buttonOneSoundURL)
+            try buttonTwoAudioPlayer = AVAudioPlayer(contentsOf: buttonTwoSoundURL)
+            try buttonThreeAudioPlayer = AVAudioPlayer(contentsOf: buttonThreeSoundURL)
+            try buttonFourAudioPlayer = AVAudioPlayer(contentsOf: buttonFourSoundURL)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
         outputLabel.text = "0"
     }
 
     @IBAction func numberPressed(sender: UIButton) {
+        numberPressed = "\(sender.tag)"
         runningNumber += "\(sender.tag)"
         outputLabel.text = runningNumber
+        if sender.tag == 1 {
+            if buttonOneAudioPlayer.isPlaying {
+                buttonOneAudioPlayer.stop()
+            } else {
+                buttonOneAudioPlayer.play()
+            }
+        } else if sender.tag == 2 {
+            if buttonTwoAudioPlayer.isPlaying {
+                buttonTwoAudioPlayer.stop()
+            } else {
+                buttonTwoAudioPlayer.play()
+            }
+        } else if sender.tag == 3 {
+            if buttonThreeAudioPlayer.isPlaying {
+                buttonThreeAudioPlayer.stop()
+            } else {
+                buttonThreeAudioPlayer.play()
+            }
+        } else if sender.tag == 4 {
+            if buttonTwoAudioPlayer.isPlaying {
+                buttonTwoAudioPlayer.stop()
+            } else {
+                buttonTwoAudioPlayer.play()
+            }
+        }
     }
     
     @IBAction func additionOperatorPressed(sender: UIButton) {
