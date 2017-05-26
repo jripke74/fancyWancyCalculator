@@ -7,7 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89A608491ED0943F000FD925 /* One.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89A608481ED0943F000FD925 /* One.m4a */; };
+		8971ADA11ED898C700955DD4 /* dividedBy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD931ED898C700955DD4 /* dividedBy.m4a */; };
+		8971ADA21ED898C700955DD4 /* times.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD941ED898C700955DD4 /* times.m4a */; };
+		8971ADA31ED898C700955DD4 /* minus.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD951ED898C700955DD4 /* minus.m4a */; };
+		8971ADA41ED898C700955DD4 /* plus.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD961ED898C700955DD4 /* plus.m4a */; };
+		8971ADA51ED898C700955DD4 /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD971ED898C700955DD4 /* 9.m4a */; };
+		8971ADA61ED898C700955DD4 /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD981ED898C700955DD4 /* 8.m4a */; };
+		8971ADA71ED898C700955DD4 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD991ED898C700955DD4 /* 7.m4a */; };
+		8971ADA81ED898C700955DD4 /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9A1ED898C700955DD4 /* 6.m4a */; };
+		8971ADA91ED898C700955DD4 /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9B1ED898C700955DD4 /* 5.m4a */; };
+		8971ADAA1ED898C700955DD4 /* 4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9C1ED898C700955DD4 /* 4.m4a */; };
+		8971ADAB1ED898C700955DD4 /* 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9D1ED898C700955DD4 /* 3.m4a */; };
+		8971ADAC1ED898C700955DD4 /* 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9E1ED898C700955DD4 /* 2.m4a */; };
+		8971ADAD1ED898C700955DD4 /* 0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971AD9F1ED898C700955DD4 /* 0.m4a */; };
+		8971ADAE1ED898C700955DD4 /* 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971ADA01ED898C700955DD4 /* 1.m4a */; };
+		8971ADB01ED89A2000955DD4 /* equals.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971ADAF1ED89A2000955DD4 /* equals.m4a */; };
+		8971ADB31ED89B2800955DD4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971ADB21ED89B2800955DD4 /* Audio.swift */; };
+		8971ADB61ED8A67100955DD4 /* clear.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8971ADB51ED8A67100955DD4 /* clear.m4a */; };
 		89FE5DB31ECFC7DF00DC743D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE5DB21ECFC7DF00DC743D /* AppDelegate.swift */; };
 		89FE5DB51ECFC7DF00DC743D /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE5DB41ECFC7DF00DC743D /* CalculatorViewController.swift */; };
 		89FE5DB81ECFC7DF00DC743D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FE5DB61ECFC7DF00DC743D /* Main.storyboard */; };
@@ -35,7 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89A608481ED0943F000FD925 /* One.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = One.m4a; sourceTree = "<group>"; };
+		8971AD931ED898C700955DD4 /* dividedBy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dividedBy.m4a; sourceTree = "<group>"; };
+		8971AD941ED898C700955DD4 /* times.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = times.m4a; sourceTree = "<group>"; };
+		8971AD951ED898C700955DD4 /* minus.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = minus.m4a; sourceTree = "<group>"; };
+		8971AD961ED898C700955DD4 /* plus.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = plus.m4a; sourceTree = "<group>"; };
+		8971AD971ED898C700955DD4 /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.m4a; sourceTree = "<group>"; };
+		8971AD981ED898C700955DD4 /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.m4a; sourceTree = "<group>"; };
+		8971AD991ED898C700955DD4 /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.m4a; sourceTree = "<group>"; };
+		8971AD9A1ED898C700955DD4 /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.m4a; sourceTree = "<group>"; };
+		8971AD9B1ED898C700955DD4 /* 5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.m4a; sourceTree = "<group>"; };
+		8971AD9C1ED898C700955DD4 /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.m4a; sourceTree = "<group>"; };
+		8971AD9D1ED898C700955DD4 /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.m4a; sourceTree = "<group>"; };
+		8971AD9E1ED898C700955DD4 /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.m4a; sourceTree = "<group>"; };
+		8971AD9F1ED898C700955DD4 /* 0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.m4a; sourceTree = "<group>"; };
+		8971ADA01ED898C700955DD4 /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.m4a; sourceTree = "<group>"; };
+		8971ADAF1ED89A2000955DD4 /* equals.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = equals.m4a; sourceTree = "<group>"; };
+		8971ADB21ED89B2800955DD4 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		8971ADB51ED8A67100955DD4 /* clear.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = clear.m4a; sourceTree = "<group>"; };
 		89FE5DAF1ECFC7DF00DC743D /* FancyWancyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyWancyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FE5DB21ECFC7DF00DC743D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89FE5DB41ECFC7DF00DC743D /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +108,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8971ADB11ED89AEF00955DD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8971ADB21ED89B2800955DD4 /* Audio.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8971ADB41ED8A5E900955DD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89FE5DB41ECFC7DF00DC743D /* CalculatorViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		89A6084A1ED09446000FD925 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				89A608481ED0943F000FD925 /* One.m4a */,
+				8971ADB51ED8A67100955DD4 /* clear.m4a */,
+				8971AD931ED898C700955DD4 /* dividedBy.m4a */,
+				8971AD941ED898C700955DD4 /* times.m4a */,
+				8971AD951ED898C700955DD4 /* minus.m4a */,
+				8971AD961ED898C700955DD4 /* plus.m4a */,
+				8971ADAF1ED89A2000955DD4 /* equals.m4a */,
+				8971AD971ED898C700955DD4 /* 9.m4a */,
+				8971AD981ED898C700955DD4 /* 8.m4a */,
+				8971AD991ED898C700955DD4 /* 7.m4a */,
+				8971AD9A1ED898C700955DD4 /* 6.m4a */,
+				8971AD9B1ED898C700955DD4 /* 5.m4a */,
+				8971AD9C1ED898C700955DD4 /* 4.m4a */,
+				8971AD9D1ED898C700955DD4 /* 3.m4a */,
+				8971AD9E1ED898C700955DD4 /* 2.m4a */,
+				8971AD9F1ED898C700955DD4 /* 0.m4a */,
+				8971ADA01ED898C700955DD4 /* 1.m4a */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -107,9 +170,10 @@
 		89FE5DB11ECFC7DF00DC743D /* FancyWancyCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				8971ADB11ED89AEF00955DD4 /* Model */,
+				8971ADB41ED8A5E900955DD4 /* View */,
 				89A6084A1ED09446000FD925 /* Resources */,
 				89FE5DB21ECFC7DF00DC743D /* AppDelegate.swift */,
-				89FE5DB41ECFC7DF00DC743D /* CalculatorViewController.swift */,
 				89FE5DB61ECFC7DF00DC743D /* Main.storyboard */,
 				89FE5DB91ECFC7DF00DC743D /* Assets.xcassets */,
 				89FE5DBB1ECFC7DF00DC743D /* LaunchScreen.storyboard */,
@@ -246,10 +310,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8971ADAC1ED898C700955DD4 /* 2.m4a in Resources */,
+				8971ADA81ED898C700955DD4 /* 6.m4a in Resources */,
+				8971ADA71ED898C700955DD4 /* 7.m4a in Resources */,
+				8971ADB01ED89A2000955DD4 /* equals.m4a in Resources */,
+				8971ADAA1ED898C700955DD4 /* 4.m4a in Resources */,
 				89FE5DBD1ECFC7DF00DC743D /* LaunchScreen.storyboard in Resources */,
-				89A608491ED0943F000FD925 /* One.m4a in Resources */,
+				8971ADAD1ED898C700955DD4 /* 0.m4a in Resources */,
+				8971ADA11ED898C700955DD4 /* dividedBy.m4a in Resources */,
 				89FE5DBA1ECFC7DF00DC743D /* Assets.xcassets in Resources */,
+				8971ADA61ED898C700955DD4 /* 8.m4a in Resources */,
+				8971ADB61ED8A67100955DD4 /* clear.m4a in Resources */,
+				8971ADA91ED898C700955DD4 /* 5.m4a in Resources */,
 				89FE5DB81ECFC7DF00DC743D /* Main.storyboard in Resources */,
+				8971ADA21ED898C700955DD4 /* times.m4a in Resources */,
+				8971ADA41ED898C700955DD4 /* plus.m4a in Resources */,
+				8971ADA51ED898C700955DD4 /* 9.m4a in Resources */,
+				8971ADAB1ED898C700955DD4 /* 3.m4a in Resources */,
+				8971ADA31ED898C700955DD4 /* minus.m4a in Resources */,
+				8971ADAE1ED898C700955DD4 /* 1.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8971ADB31ED89B2800955DD4 /* Audio.swift in Sources */,
 				89FE5DB51ECFC7DF00DC743D /* CalculatorViewController.swift in Sources */,
 				89FE5DB31ECFC7DF00DC743D /* AppDelegate.swift in Sources */,
 			);

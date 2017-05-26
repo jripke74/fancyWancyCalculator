@@ -13,22 +13,7 @@ class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UITextField!
     
-    var buttonZeroAudioPlayer = AVAudioPlayer()
-    var buttonOneAudioPlayer = AVAudioPlayer()
-    var buttonTwoAudioPlayer = AVAudioPlayer()
-    var buttonThreeAudioPlayer = AVAudioPlayer()
-    var buttonFourAudioPlayer = AVAudioPlayer()
-    var buttonFiveAudioPlayer = AVAudioPlayer()
-    var buttonSixAudioPlayer = AVAudioPlayer()
-    var buttonSevenAudioPlayer = AVAudioPlayer()
-    var buttonEightAudioPlayer = AVAudioPlayer()
-    var buttonNineAudioPlayer = AVAudioPlayer()
-    var buttonAddAudioPlayer = AVAudioPlayer()
-    var buttonSubtractAudioPlayer = AVAudioPlayer()
-    var buttonMultiplyAudioPlayer = AVAudioPlayer()
-    var buttonDivideAudioPlayer = AVAudioPlayer()
-    var buttonClearAudioPlayer = AVAudioPlayer()
-    var buttonEqualAudioPlayer = AVAudioPlayer()
+    let audio = Audio()
     
     var runningNumber = ""
     var numberPressed = ""
@@ -47,16 +32,16 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttonZeroSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonOneSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonTwoSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonThreeSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonFourSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonFiveSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonSixSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonSevenSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonEightSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
-        let buttonNineSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonZeroSoundPath = Bundle.main.path(forResource: "0", ofType: "m4a")
+        let buttonOneSoundPath = Bundle.main.path(forResource: "1", ofType: "m4a")
+        let buttonTwoSoundPath = Bundle.main.path(forResource: "2", ofType: "m4a")
+        let buttonThreeSoundPath = Bundle.main.path(forResource: "3", ofType: "m4a")
+        let buttonFourSoundPath = Bundle.main.path(forResource: "4", ofType: "m4a")
+        let buttonFiveSoundPath = Bundle.main.path(forResource: "5", ofType: "m4a")
+        let buttonSixSoundPath = Bundle.main.path(forResource: "6", ofType: "m4a")
+        let buttonSevenSoundPath = Bundle.main.path(forResource: "7", ofType: "m4a")
+        let buttonEightSoundPath = Bundle.main.path(forResource: "8", ofType: "m4a")
+        let buttonNineSoundPath = Bundle.main.path(forResource: "9", ofType: "m4a")
         
         let buttonZeroSoundURL = URL(fileURLWithPath: buttonZeroSoundPath!)
         let buttonOneSoundURL = URL(fileURLWithPath: buttonOneSoundPath!)
@@ -70,16 +55,16 @@ class CalculatorViewController: UIViewController {
         let buttonNineSoundURL = URL(fileURLWithPath: buttonNineSoundPath!)
         
         do {
-            try buttonZeroAudioPlayer = AVAudioPlayer(contentsOf: buttonZeroSoundURL)
-            try buttonOneAudioPlayer = AVAudioPlayer(contentsOf: buttonOneSoundURL)
-            try buttonTwoAudioPlayer = AVAudioPlayer(contentsOf: buttonTwoSoundURL)
-            try buttonThreeAudioPlayer = AVAudioPlayer(contentsOf: buttonThreeSoundURL)
-            try buttonFourAudioPlayer = AVAudioPlayer(contentsOf: buttonFourSoundURL)
-            try buttonFiveAudioPlayer = AVAudioPlayer(contentsOf: buttonFiveSoundURL)
-            try buttonSixAudioPlayer = AVAudioPlayer(contentsOf: buttonSixSoundURL)
-            try buttonSevenAudioPlayer = AVAudioPlayer(contentsOf: buttonSevenSoundURL)
-            try buttonEightAudioPlayer = AVAudioPlayer(contentsOf: buttonEightSoundURL)
-            try buttonNineAudioPlayer = AVAudioPlayer(contentsOf: buttonNineSoundURL)
+            try audio.buttonZeroAudioPlayer = AVAudioPlayer(contentsOf: buttonZeroSoundURL)
+            try audio.buttonOneAudioPlayer = AVAudioPlayer(contentsOf: buttonOneSoundURL)
+            try audio.buttonTwoAudioPlayer = AVAudioPlayer(contentsOf: buttonTwoSoundURL)
+            try audio.buttonThreeAudioPlayer = AVAudioPlayer(contentsOf: buttonThreeSoundURL)
+            try audio.buttonFourAudioPlayer = AVAudioPlayer(contentsOf: buttonFourSoundURL)
+            try audio.buttonFiveAudioPlayer = AVAudioPlayer(contentsOf: buttonFiveSoundURL)
+            try audio.buttonSixAudioPlayer = AVAudioPlayer(contentsOf: buttonSixSoundURL)
+            try audio.buttonSevenAudioPlayer = AVAudioPlayer(contentsOf: buttonSevenSoundURL)
+            try audio.buttonEightAudioPlayer = AVAudioPlayer(contentsOf: buttonEightSoundURL)
+            try audio.buttonNineAudioPlayer = AVAudioPlayer(contentsOf: buttonNineSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
@@ -92,64 +77,64 @@ class CalculatorViewController: UIViewController {
         outputLabel.text = runningNumber
         switch sender.tag {
         case 0:
-            if buttonZeroAudioPlayer.isPlaying {
-                buttonZeroAudioPlayer.stop()
+            if audio.buttonZeroAudioPlayer.isPlaying {
+                audio.buttonZeroAudioPlayer.stop()
             } else {
-                buttonZeroAudioPlayer.play()
+                audio.buttonZeroAudioPlayer.play()
             }
         case 1:
-            if buttonOneAudioPlayer.isPlaying {
-                buttonOneAudioPlayer.stop()
+            if audio.buttonOneAudioPlayer.isPlaying {
+                audio.buttonOneAudioPlayer.stop()
             } else {
-                buttonOneAudioPlayer.play()
+                audio.buttonOneAudioPlayer.play()
             }
         case 2:
-            if buttonTwoAudioPlayer.isPlaying {
-                buttonTwoAudioPlayer.stop()
+            if audio.buttonTwoAudioPlayer.isPlaying {
+                audio.buttonTwoAudioPlayer.stop()
             } else {
-                buttonTwoAudioPlayer.play()
+                audio.buttonTwoAudioPlayer.play()
             }
         case 3:
-            if buttonThreeAudioPlayer.isPlaying {
-                buttonThreeAudioPlayer.stop()
+            if audio.buttonThreeAudioPlayer.isPlaying {
+                audio.buttonThreeAudioPlayer.stop()
             } else {
-                buttonThreeAudioPlayer.play()
+                audio.buttonThreeAudioPlayer.play()
             }
         case 4:
-            if buttonFourAudioPlayer.isPlaying {
-                buttonFourAudioPlayer.stop()
+            if audio.buttonFourAudioPlayer.isPlaying {
+                audio.buttonFourAudioPlayer.stop()
             } else {
-                buttonFourAudioPlayer.play()
+                audio.buttonFourAudioPlayer.play()
             }
         case 5:
-            if buttonFiveAudioPlayer.isPlaying {
-                buttonFiveAudioPlayer.stop()
+            if audio.buttonFiveAudioPlayer.isPlaying {
+                audio.buttonFiveAudioPlayer.stop()
             } else {
-                buttonFiveAudioPlayer.play()
+                audio.buttonFiveAudioPlayer.play()
             }
         case 6:
-            if buttonSixAudioPlayer.isPlaying {
-                buttonSixAudioPlayer.stop()
+            if audio.buttonSixAudioPlayer.isPlaying {
+                audio.buttonSixAudioPlayer.stop()
             } else {
-                buttonSixAudioPlayer.play()
+                audio.buttonSixAudioPlayer.play()
             }
         case 7:
-            if buttonSevenAudioPlayer.isPlaying {
-                buttonSevenAudioPlayer.stop()
+            if audio.buttonSevenAudioPlayer.isPlaying {
+                audio.buttonSevenAudioPlayer.stop()
             } else {
-                buttonSevenAudioPlayer.play()
+                audio.buttonSevenAudioPlayer.play()
             }
         case 8:
-            if buttonEightAudioPlayer.isPlaying {
-                buttonEightAudioPlayer.stop()
+            if audio.buttonEightAudioPlayer.isPlaying {
+                audio.buttonEightAudioPlayer.stop()
             } else {
-                buttonEightAudioPlayer.play()
+                audio.buttonEightAudioPlayer.play()
             }
         case 9:
-            if buttonNineAudioPlayer.isPlaying {
-                buttonNineAudioPlayer.stop()
+            if audio.buttonNineAudioPlayer.isPlaying {
+                audio.buttonNineAudioPlayer.stop()
             } else {
-                buttonNineAudioPlayer.play()
+                audio.buttonNineAudioPlayer.play()
             }
         default:
             break
@@ -157,109 +142,109 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func additionOperatorPressed(sender: UIButton) {
-        let buttonAddSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonAddSoundPath = Bundle.main.path(forResource: "plus", ofType: "m4a")
         let buttonAddSoundURL = URL(fileURLWithPath: buttonAddSoundPath!)
         
         do {
-            try buttonAddAudioPlayer = AVAudioPlayer(contentsOf: buttonAddSoundURL)
+            try audio.buttonAddAudioPlayer = AVAudioPlayer(contentsOf: buttonAddSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonAddAudioPlayer.isPlaying {
-            buttonAddAudioPlayer.stop()
+        if audio.buttonAddAudioPlayer.isPlaying {
+            audio.buttonAddAudioPlayer.stop()
         } else {
-            buttonAddAudioPlayer.play()
+            audio.buttonAddAudioPlayer.play()
         }
         processOperation(operation: .Add)
     }
     
     @IBAction func subtractionOperatorPressed(sender: UIButton) {
-        let buttonSubtractSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonSubtractSoundPath = Bundle.main.path(forResource: "minus", ofType: "m4a")
         let buttonSubtractSoundURL = URL(fileURLWithPath: buttonSubtractSoundPath!)
         
         do {
-            try buttonSubtractAudioPlayer = AVAudioPlayer(contentsOf: buttonSubtractSoundURL)
+            try audio.buttonSubtractAudioPlayer = AVAudioPlayer(contentsOf: buttonSubtractSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonSubtractAudioPlayer.isPlaying {
-            buttonSubtractAudioPlayer.stop()
+        if audio.buttonSubtractAudioPlayer.isPlaying {
+            audio.buttonSubtractAudioPlayer.stop()
         } else {
-            buttonSubtractAudioPlayer.play()
+            audio.buttonSubtractAudioPlayer.play()
         }
         processOperation(operation: .Subtract)
     }
     
     @IBAction func multiplicationOperatorPressed(sender: UIButton) {
-        let buttonMultiplySoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonMultiplySoundPath = Bundle.main.path(forResource: "times", ofType: "m4a")
         let buttonMultiplySoundURL = URL(fileURLWithPath: buttonMultiplySoundPath!)
         
         do {
-            try buttonMultiplyAudioPlayer = AVAudioPlayer(contentsOf: buttonMultiplySoundURL)
+            try audio.buttonMultiplyAudioPlayer = AVAudioPlayer(contentsOf: buttonMultiplySoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonMultiplyAudioPlayer.isPlaying {
-            buttonMultiplyAudioPlayer.stop()
+        if audio.buttonMultiplyAudioPlayer.isPlaying {
+            audio.buttonMultiplyAudioPlayer.stop()
         } else {
-            buttonMultiplyAudioPlayer.play()
+            audio.buttonMultiplyAudioPlayer.play()
         }
         processOperation(operation: .Multiply)
     }
     
     @IBAction func divisionOperatorPressed(sender: UIButton) {
-        let buttonDivideSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonDivideSoundPath = Bundle.main.path(forResource: "dividedBy", ofType: "m4a")
         let buttonDivideSoundURL = URL(fileURLWithPath: buttonDivideSoundPath!)
         
         do {
-            try buttonDivideAudioPlayer = AVAudioPlayer(contentsOf: buttonDivideSoundURL)
+            try audio.buttonDivideAudioPlayer = AVAudioPlayer(contentsOf: buttonDivideSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonDivideAudioPlayer.isPlaying {
-            buttonDivideAudioPlayer.stop()
+        if audio.buttonDivideAudioPlayer.isPlaying {
+            audio.buttonDivideAudioPlayer.stop()
         } else {
-            buttonDivideAudioPlayer.play()
+            audio.buttonDivideAudioPlayer.play()
         }
         processOperation(operation: .Divide)
     }
     
     @IBAction func egualButtonPressed(sender: UIButton) {
-        let buttonEqualSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonEqualSoundPath = Bundle.main.path(forResource: "equals", ofType: "m4a")
         let buttonEqualSoundURL = URL(fileURLWithPath: buttonEqualSoundPath!)
         
         do {
-            try buttonEqualAudioPlayer = AVAudioPlayer(contentsOf: buttonEqualSoundURL)
+            try audio.buttonEqualAudioPlayer = AVAudioPlayer(contentsOf: buttonEqualSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonEqualAudioPlayer.isPlaying {
-            buttonEqualAudioPlayer.stop()
+        if audio.buttonEqualAudioPlayer.isPlaying {
+            audio.buttonEqualAudioPlayer.stop()
         } else {
-            buttonEqualAudioPlayer.play()
+            audio.buttonEqualAudioPlayer.play()
         }
         processOperation(operation: currentOperation)
     }
     
     @IBAction func clearButtonPressed(sender: UIButton) {
-        let buttonClearSoundPath = Bundle.main.path(forResource: "One", ofType: "m4a")
+        let buttonClearSoundPath = Bundle.main.path(forResource: "clear", ofType: "m4a")
         let buttonClearSoundURL = URL(fileURLWithPath: buttonClearSoundPath!)
         
         do {
-            try buttonClearAudioPlayer = AVAudioPlayer(contentsOf: buttonClearSoundURL)
+            try audio.buttonClearAudioPlayer = AVAudioPlayer(contentsOf: buttonClearSoundURL)
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        if buttonClearAudioPlayer.isPlaying {
-            buttonClearAudioPlayer.stop()
+        if audio.buttonClearAudioPlayer.isPlaying {
+            audio.buttonClearAudioPlayer.stop()
         } else {
-            buttonClearAudioPlayer.play()
+            audio.buttonClearAudioPlayer.play()
         }
         runningNumber = ""
         currentOperation = Operation.Empty
